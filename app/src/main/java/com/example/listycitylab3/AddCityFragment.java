@@ -22,10 +22,8 @@ public class AddCityFragment extends DialogFragment {
     private AddCityDialogListener listener;
     private City cityToEdit;
 
-    // REQUIRED empty constructor
     public AddCityFragment() {}
 
-    // Preferred Android way
     public static AddCityFragment newInstance(City city) {
         AddCityFragment fragment = new AddCityFragment();
         Bundle args = new Bundle();
@@ -50,7 +48,6 @@ public class AddCityFragment extends DialogFragment {
         EditText editCityName = view.findViewById(R.id.edit_text_city_text);
         EditText editProvinceName = view.findViewById(R.id.edit_text_province_text);
 
-        // Check if editing
         if (getArguments() != null) {
             cityToEdit = (City) getArguments().getSerializable("city");
             editCityName.setText(cityToEdit.getName());
